@@ -2,9 +2,8 @@ import 'dart:developer' as developer;
 import 'package:flutter/material.dart';
 import 'package:meditation_app/data/bloc/signup/signup_bloc.dart';
 import 'package:meditation_app/gen/assets.gen.dart';
-import 'package:meditation_app/widgets/textformfield/custom_your_name_field.dart';
-import 'package:meditation_app/widgets/textformfield/my_custom_string_form.dart';
-
+import 'package:meditation_app/widgets/textformfield/custom_your_email_field_widget.dart';
+import 'package:meditation_app/widgets/textformfield/custom_your_name_field_widget.dart';
 
 class SignupPage extends StatefulWidget {
   static const ROUTE_NAME = 'SignupPage';
@@ -119,40 +118,27 @@ class _SignupPageState extends State<SignupPage> {
                     child: Column(
                       children: <Widget>[
                         Container(
-                          margin: EdgeInsets.only(left: 20, right: 20, top: 50),
-                          child: TextFormField(
-                            validator: (value) {
-                              if (value!.isEmpty || value.length <= 6) {
-                                return "You must be input correct your name";
-                              } else {
-                                return null;
-                              }
-                            },
-                            cursorColor: Colors.black,
-                            keyboardType: TextInputType.visiblePassword,
-                            decoration: InputDecoration(
-                              hintText: "Your name",
-                            ),
-                          ),
-                        ),
+                            margin:
+                                EdgeInsets.only(left: 20, right: 20, top: 50),
+                            child: CustomYourNameField(
+                              validator: (value) {
+                                return value;
+                              },
+                              decoration:
+                                  InputDecoration(hintText: "Your name"),
+                            )),
                         Container(
-                          margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                          child: TextFormField(
-                            validator: (value) {
-                              if (value!.isEmpty ||
-                                  value.length <= 6 ||
-                                  !value.contains("@") ||
-                                  !value.contains(".")) {
-                                return "Email not correct";
-                              } else {
-                                return null;
-                              }
-                            },
-                            cursorColor: Colors.black,
-                            decoration:
-                                InputDecoration(hintText: "Email address"),
-                          ),
-                        ),
+                            margin:
+                                EdgeInsets.only(left: 20, right: 20, top: 20),
+                            child: Container(
+                              child: CustomYourEmailField(
+                                validator: (value) {
+                                  return value;
+                                },
+                                decoration:
+                                    InputDecoration(hintText: "Email address"),
+                              ),
+                            )),
                         Container(
                           margin: EdgeInsets.only(left: 20, right: 20, top: 20),
                           child: TextFormField(
@@ -172,13 +158,6 @@ class _SignupPageState extends State<SignupPage> {
                             ),
                           ),
                         ),
-                        Container(
-                          child: CustomYourNameField(
-                            validator: (value){
-                              return value;
-                            },
-                          ),
-                        )
                       ],
                     ),
                   ),

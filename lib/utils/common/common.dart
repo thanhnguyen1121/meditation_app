@@ -1,0 +1,4 @@
+class Common {
+  static const CHOOSE_RECTANGLE_WIDGET = "CHOOSE_RECTANGLE_WIDGET";
+  static const CHOOSE_SQUARE_WIDGET = "CHOOSE_SQUARE_WIDGET";
+}

@@ -8,9 +8,32 @@ import 'package:flutter/widgets.dart';
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  $AssetsImagesChooseTopicGen get chooseTopic =>
+      const $AssetsImagesChooseTopicGen();
   $AssetsImagesSigninSignupPageGen get signinSignupPage =>
       const $AssetsImagesSigninSignupPageGen();
   $AssetsImagesWelcomeGen get welcome => const $AssetsImagesWelcomeGen();
+}
+
+class $AssetsImagesChooseTopicGen {
+  const $AssetsImagesChooseTopicGen();
+
+  AssetGenImage get icBetterLearn =>
+      const AssetGenImage('assets/images/choose_topic/ic_better_learn.png');
+  AssetGenImage get icBetterSleep =>
+      const AssetGenImage('assets/images/choose_topic/ic_better_sleep.png');
+  AssetGenImage get icBetterWork =>
+      const AssetGenImage('assets/images/choose_topic/ic_better_work.png');
+  AssetGenImage get icImprovePerforman => const AssetGenImage(
+      'assets/images/choose_topic/ic_improve_performan.png');
+  AssetGenImage get icIncreateHappy =>
+      const AssetGenImage('assets/images/choose_topic/ic_increate_happy.png');
+  AssetGenImage get icPersionalGrowth =>
+      const AssetGenImage('assets/images/choose_topic/ic_persional_growth.png');
+  AssetGenImage get icReduceAnxiety =>
+      const AssetGenImage('assets/images/choose_topic/ic_reduce_anxiety.png');
+  AssetGenImage get icReduceStress =>
+      const AssetGenImage('assets/images/choose_topic/ic_reduce_stress.png');
 }
 
 class $AssetsImagesSigninSignupPageGen {

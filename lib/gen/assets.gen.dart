@@ -21,6 +21,8 @@ class $AssetsImagesSigninSignupPageGen {
       const AssetGenImage('assets/images/signin_signup_page/ic_bg.png');
   AssetGenImage get icBgSigninSignup => const AssetGenImage(
       'assets/images/signin_signup_page/ic_bg_signin_signup.png');
+  AssetGenImage get icEyeClose =>
+      const AssetGenImage('assets/images/signin_signup_page/ic_eye_close.png');
   AssetGenImage get icFacbookLogo => const AssetGenImage(
       'assets/images/signin_signup_page/ic_facbook_logo.png');
   AssetGenImage get icGoogleLogo => const AssetGenImage(

@@ -2,8 +2,10 @@ import 'dart:developer' as developer;
 import 'package:flutter/material.dart';
 import 'package:meditation_app/data/bloc/signup/signup_bloc.dart';
 import 'package:meditation_app/gen/assets.gen.dart';
-import 'package:meditation_app/widgets/textformfield/custom_your_email_field_widget.dart';
-import 'package:meditation_app/widgets/textformfield/custom_your_name_field_widget.dart';
+import 'package:meditation_app/widgets/textformfield/custom_my_password_field_widget.dart';
+
+import '../widgets/textformfield/custom_your_email_field_widget.dart';
+import '../widgets/textformfield/custom_your_name_field_widget.dart';
 
 class SignupPage extends StatefulWidget {
   static const ROUTE_NAME = 'SignupPage';
@@ -141,18 +143,7 @@ class _SignupPageState extends State<SignupPage> {
                             )),
                         Container(
                           margin: EdgeInsets.only(left: 20, right: 20, top: 20),
-                          child: TextFormField(
-                            validator: (value) {
-                              if (value!.isEmpty || value.length <= 6) {
-                                return "Password too short";
-                              } else {
-                                return null;
-                              }
-                            },
-                            cursorColor: Colors.black,
-                            obscureText: true,
-                            obscuringCharacter: "*",
-                            keyboardType: TextInputType.visiblePassword,
+                          child: CustomMyPasswordField(
                             decoration: InputDecoration(
                               hintText: "Password",
                             ),

@@ -2,6 +2,7 @@ import 'dart:developer' as developer;
 import 'package:flutter/material.dart';
 
 import '../gen/assets.gen.dart';
+import 'chose_topic_page.dart';
 
 class WelcomePage extends StatefulWidget {
   static const ROUTE_NAME = 'SplashPage';
@@ -70,13 +71,16 @@ class _WelcomePageState extends State<WelcomePage> {
                   width: double.infinity,
                   margin: EdgeInsets.only(left: 20, right: 20, bottom: 30),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ChoseTopicPage()));
+                     },
                     style: Theme.of(context).elevatedButtonTheme.style!.merge(
                         ElevatedButton.styleFrom(
                             primary: Colors.white, onPrimary: Colors.black)),
-                    child: Text(
-                      "GET STARTED"
-                    ),
+                    child: Text("GET STARTED"),
                   ),
                 ),
               )

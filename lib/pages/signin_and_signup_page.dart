@@ -32,8 +32,8 @@ class _SigninAndSignupPageState extends State<SigninAndSignupPage> {
     var _content = Stack(
       children: [
         Image.asset(Assets.images.signinSignupPage.icBg.path),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+        ListView(
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Expanded(
                 flex: 5,

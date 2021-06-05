@@ -159,8 +159,8 @@ class _ApplicationState extends State<Application> {
               padding: EdgeInsets.only(top: 20, bottom: 20),
             ))
       ),
-      // initialRoute: SigninAndSignupPage.ROUTE_NAME,
-      initialRoute: ChoseTopicPage.ROUTE_NAME,
+      initialRoute: SigninAndSignupPage.ROUTE_NAME,
+      // initialRoute: ChoseTopicPage.ROUTE_NAME,
       onGenerateRoute: (setting) {
         Widget page;
         switch (setting.name) {

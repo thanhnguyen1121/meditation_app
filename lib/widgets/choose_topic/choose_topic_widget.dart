@@ -11,7 +11,7 @@ class ChooseTopicRectangleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: this.onClick(chooseWidgetModel),
+      onTap: ()=>this.onClick(chooseWidgetModel),
       child: Container(
         padding: EdgeInsets.all(8.0),
         width: 180,

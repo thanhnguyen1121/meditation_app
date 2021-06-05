@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,7 +34,7 @@ class SignInBloc extends Cubit<SignInState> {
 
   void signUp(BuildContext context) {
     Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => SignupPage()));
+        .push(MaterialPageRoute(builder: (context) => SignupPage()));
   }
 
   void back(BuildContext context) {
@@ -45,9 +47,14 @@ class SignInBloc extends Cubit<SignInState> {
       builder: (BuildContext context) {
         // return object of type Dialog
         return AlertDialog(
-          title: new Text(mes, textAlign: TextAlign.center,),
+          title: new Text(
+            mes,
+            textAlign: TextAlign.center,
+          ),
           content: new Text(
-              "Please make sure your email and password input correct!", textAlign: TextAlign.center,),
+            "Please make sure your email and password input correct!",
+            textAlign: TextAlign.center,
+          ),
           actions: <Widget>[
             // usually buttons at the bottom of the dialog
             new ElevatedButton(

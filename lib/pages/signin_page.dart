@@ -56,7 +56,10 @@ class _SigninPageState extends State<SigninPage> {
                     width: double.infinity,
                     child: Text(
                       "Welcome Back!",
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .headline5,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -72,7 +75,11 @@ class _SigninPageState extends State<SigninPage> {
                           Text("CONTINUE WITH FACEBOOK")
                         ],
                       ),
-                      style: Theme.of(context).elevatedButtonTheme.style!.merge(
+                      style: Theme
+                          .of(context)
+                          .elevatedButtonTheme
+                          .style!
+                          .merge(
                           ElevatedButton.styleFrom(
                               primary: Color(0xff7583CA),
                               onPrimary: Colors.white)),
@@ -92,12 +99,13 @@ class _SigninPageState extends State<SigninPage> {
                             )
                           ],
                         ),
-                        style: Theme.of(context)
+                        style: Theme
+                            .of(context)
                             .elevatedButtonTheme
                             .style!
                             .merge(ElevatedButton.styleFrom(
-                                primary: Colors.white,
-                                onPrimary: Colors.black))),
+                            primary: Colors.white,
+                            onPrimary: Colors.black))),
                   ),
                   Container(
                     width: double.infinity,
@@ -105,7 +113,8 @@ class _SigninPageState extends State<SigninPage> {
                     child: Text(
                       "OR LOG IN WITH EMAIL",
                       textAlign: TextAlign.center,
-                      style: Theme.of(context)
+                      style: Theme
+                          .of(context)
                           .textTheme
                           .subtitle1!
                           .copyWith(color: Color(0xffA1A4B2), fontSize: 14),
@@ -114,6 +123,7 @@ class _SigninPageState extends State<SigninPage> {
                   Container(
                     margin: EdgeInsets.only(left: 20, right: 20, top: 50),
                     child: TextField(
+                      controller: _emailController,
                       cursorColor: Colors.black,
                       decoration: InputDecoration(hintText: "Email address"),
                     ),
@@ -121,6 +131,7 @@ class _SigninPageState extends State<SigninPage> {
                   Container(
                     margin: EdgeInsets.only(left: 20, right: 20, top: 20),
                     child: TextField(
+                      controller: _passController,
                       cursorColor: Colors.black,
                       obscureText: true,
                       obscuringCharacter: "*",
@@ -134,17 +145,19 @@ class _SigninPageState extends State<SigninPage> {
                     margin: EdgeInsets.only(left: 20, right: 20, top: 35),
                     width: double.infinity,
                     child: ElevatedButton(
-                        onPressed: () => _bloc.loginNormal(context,
-                            _emailController.text, _passController.text),
+                        onPressed: () =>
+                            _bloc.loginNormal(context,
+                                _emailController.text, _passController.text),
                         child: Text(
                           "LOG IN",
                         ),
-                        style: Theme.of(context)
+                        style: Theme
+                            .of(context)
                             .elevatedButtonTheme
                             .style!
                             .merge(ElevatedButton.styleFrom(
-                                primary: Color(0xff8E97FD),
-                                onPrimary: Colors.white))),
+                            primary: Color(0xff8E97FD),
+                            onPrimary: Colors.white))),
                   ),
                   GestureDetector(
                     onTap: () => _bloc.forgotPassword(),
@@ -154,7 +167,8 @@ class _SigninPageState extends State<SigninPage> {
                       alignment: Alignment.center,
                       child: Text(
                         "Forgot Password?",
-                        style: Theme.of(context)
+                        style: Theme
+                            .of(context)
                             .textTheme
                             .bodyText2!
                             .copyWith(color: Colors.black),
@@ -170,18 +184,20 @@ class _SigninPageState extends State<SigninPage> {
                         text: TextSpan(children: [
                           TextSpan(
                               text: "HAVEN'T AN ACCOUNT?",
-                              style: Theme.of(context)
+                              style: Theme
+                                  .of(context)
                                   .textTheme
                                   .bodyText2!
                                   .copyWith(
-                                      color: Color(0xffA1A4B2), fontSize: 14)),
+                                  color: Color(0xffA1A4B2), fontSize: 14)),
                           TextSpan(
                               text: " SIGN UP",
-                              style: Theme.of(context)
+                              style: Theme
+                                  .of(context)
                                   .textTheme
                                   .bodyText2!
                                   .copyWith(
-                                      color: Color(0xff8E97FD), fontSize: 14))
+                                  color: Color(0xff8E97FD), fontSize: 14))
                         ]),
                       ),
                     ),

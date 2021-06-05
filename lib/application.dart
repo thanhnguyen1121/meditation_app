@@ -13,7 +13,7 @@ import 'package:meditation_app/pages/signin_page.dart';
 import 'package:meditation_app/pages/signup_page.dart';
 import 'package:meditation_app/pages/sleep_music_page.dart';
 import 'package:meditation_app/pages/sleep_page.dart';
-import 'package:meditation_app/pages/splash_page.dart';
+import 'package:meditation_app/pages/welcome_page.dart';
 import 'package:meditation_app/pages/welcome_sleep_page.dart';
 
 class Application extends StatefulWidget {
@@ -158,7 +158,7 @@ class _ApplicationState extends State<Application> {
             ))
       ),
       // initialRoute: SigninAndSignupPage.ROUTE_NAME,
-      initialRoute: SignupPage.ROUTE_NAME,
+      initialRoute: WelcomePage.ROUTE_NAME,
       onGenerateRoute: (setting) {
         Widget page;
         switch (setting.name) {
@@ -201,8 +201,8 @@ class _ApplicationState extends State<Application> {
           case SleepPage.ROUTE_NAME:
             page = SleepPage();
             break;
-          case SplashPage.ROUTE_NAME:
-            page = SplashPage();
+          case WelcomePage.ROUTE_NAME:
+            page = WelcomePage();
             break;
           case WelcomeSleepPage.ROUTE_NAME:
             page = WelcomeSleepPage();

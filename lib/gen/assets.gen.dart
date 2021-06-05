@@ -10,6 +10,7 @@ class $AssetsImagesGen {
 
   $AssetsImagesSigninSignupPageGen get signinSignupPage =>
       const $AssetsImagesSigninSignupPageGen();
+  $AssetsImagesWelcomeGen get welcome => const $AssetsImagesWelcomeGen();
 }
 
 class $AssetsImagesSigninSignupPageGen {
@@ -31,6 +32,15 @@ class $AssetsImagesSigninSignupPageGen {
       const AssetGenImage('assets/images/signin_signup_page/ic_logo.png');
   AssetGenImage get icSilentMoon => const AssetGenImage(
       'assets/images/signin_signup_page/ic_silent_moon.png');
+}
+
+class $AssetsImagesWelcomeGen {
+  const $AssetsImagesWelcomeGen();
+
+  AssetGenImage get icSilentMoonWhite =>
+      const AssetGenImage('assets/images/welcome/ic_silent_moon_white.png');
+  AssetGenImage get icWelcomeBg =>
+      const AssetGenImage('assets/images/welcome/ic_welcome_bg.png');
 }
 
 class Assets {

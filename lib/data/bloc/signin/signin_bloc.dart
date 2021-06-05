@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meditation_app/data/bloc/signin/sign_in_state.dart';
 import 'package:meditation_app/pages/signup_page.dart';
-import 'package:meditation_app/pages/splash_page.dart';
+import 'package:meditation_app/pages/welcome_page.dart';
 
 class SignInBloc extends Cubit<SignInState> {
   SignInBloc() : super(SignInState.loading());
@@ -21,7 +21,7 @@ class SignInBloc extends Cubit<SignInState> {
   void loginNormal(BuildContext context, String email, String password) {
     if (email == "123" && password == "123") {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => SplashPage()));
+          MaterialPageRoute(builder: (context) => WelcomePage()));
     } else {
       // emit(SignInState.error("Email or password not correct!"));
       showErrorDialog(context, "Email or password not correct!");
